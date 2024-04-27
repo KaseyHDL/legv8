@@ -8,7 +8,7 @@ module im (
   // inputs
   input  logic [63:0] INST_ADDR, 
   // outputs
-  output logic [31:0] INSTRUCTION,
+  output logic [31:0] INSTRUCTION
 );
   // load instruction memory
   logic [7:0] inst_mem [0:31];
