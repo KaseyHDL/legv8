@@ -151,18 +151,10 @@ module datapath (
   );
 
   // and
-  and and_u0 (
-    .i1  (BRANCH),
-    .i1  (zero_flag),
-    .out (branch_and)
-  );
+  and and_u0 (branch_and, BRANCH, zero_flag);
 
   // or
-  or or_u0 (
-    .i1  (UNCOND_BRANCH),
-    .i1  (branch_and),
-    .out (pc_src)
-  );
+  or or_u0 (pc_src, UNCOND_BRANCH, branch_and);
 
   // PCSrc mux
   mux #(.WIDTH(64)) mux_pc_src (

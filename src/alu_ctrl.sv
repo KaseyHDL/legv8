@@ -4,6 +4,8 @@
 // Engineer: Kasey Hill
 // Filename: alu_ctrl.sv
 //============================================================================//
+`include "opcode.svh"
+
 module alu_ctrl (
   // inputs
   input  logic [10:0] OPCODE, 

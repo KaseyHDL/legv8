@@ -11,12 +11,12 @@ module data_mem (
   input  logic        MEM_WRITE,
   input  logic        MEM_READ, 
   input  logic [63:0] ADDR,
-  input  logic [63:0] WR_DATA    
+  input  logic [63:0] WR_DATA,    
   // outputs
   output logic [63:0] RD_DATA
 );
   // register file
-  logic [63:0] data_memory [31:0]; // TODO: make sure this is right
+  logic [63:0][31:0] data_memory; // TODO: make sure this is right
 
   // read logic
   always_comb begin

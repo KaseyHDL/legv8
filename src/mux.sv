@@ -10,9 +10,9 @@ module mux #(parameter WIDTH = 64)(
 	input  logic             s, // select
 	output logic [WIDTH-1:0] z  // out
 );
-
+  // output select
 	always_comb begin
-		unqiue case (s)
+		unique case (s)
 			1'b0 : z = a;
 			1'b1 : z = b;
 		endcase

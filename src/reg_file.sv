@@ -18,7 +18,7 @@ module reg_file (
   output logic [63:0] RD_DATA2  
 );
   // register file
-  logic [63:0] registers [31:0];
+  logic [63:0][31:0] registers;
 
   // read logic
   always_comb begin
@@ -28,8 +28,8 @@ module reg_file (
 
   // write logic
   always_ff @(posedge CLK, negedge RST_N) begin
-    if      (!RST_N)      registers         <= 0;
-    else if (REG_WRITE_C) registers[WR_REG] <= WR_DATA; 
+    if      (!RST_N)    registers         <= 0;
+    else if (REG_WRITE) registers[WR_REG] <= WR_DATA; 
   end
 
 endmodule

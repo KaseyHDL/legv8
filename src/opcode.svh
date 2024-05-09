@@ -2,7 +2,7 @@
 // OPCODE Header File
 //----------------------------------------------------------------------------//
 // Engineer: Kasey Hill
-// Filename: opcode.sv
+// Filename: opcode.svh
 //============================================================================//
 // R-format
 localparam ADD  = 11'h458;

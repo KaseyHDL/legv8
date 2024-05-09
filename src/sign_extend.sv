@@ -14,9 +14,8 @@ module sign_extend (
   always_comb begin // TODO: this logic might be wrong
     SIGN_EXTEND_OUT = 64'b0;
     case (INSTRUCTION[31:21])
-      LDUR, STUR : SIGN_EXTEND_OUT = {32{INSTRUCTION[31]}, INSTRUCTION};
-      CBZ        : SIGN_EXTEND_OUT = {32{INSTRUCTION[31]}, INSTRUCTION};
-      end
+      LDUR, STUR : SIGN_EXTEND_OUT = {{32{INSTRUCTION[31]}}, INSTRUCTION};
+      CBZ        : SIGN_EXTEND_OUT = {{32{INSTRUCTION[31]}}, INSTRUCTION};
     endcase
   end
 
