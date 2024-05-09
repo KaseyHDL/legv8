@@ -1,5 +1,5 @@
 //============================================================================//
-// Registers File
+// Registers File // TODO: add file here
 //----------------------------------------------------------------------------//
 // Engineer: Kasey Hill
 // Filename: reg_file.sv
@@ -8,7 +8,7 @@ module reg_file (
   // inputs
   input  logic        CLK,
   input  logic        RST_N,
-  input  logic        REG_WRITE_C,
+  input  logic        REG_WRITE,
   input  logic [ 4:0] RD_REG1,
   input  logic [ 4:0] RD_REG2,  
   input  logic [ 4:0] WR_REG,    
