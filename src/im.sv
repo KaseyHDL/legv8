@@ -11,13 +11,13 @@ module im (
   output logic [31:0] INSTRUCTION
 );
   // load instruction memory
-  logic [7:0] inst_mem [0:31];
+  logic [31:0] inst_mem [15:0];
 
   initial begin
     $readmemh("inst_mem.mem", inst_mem);
   end
 
   // instruction select
-  assign INSTRUCTION = inst_mem[INST_ADDR];
+  assign INSTRUCTION = inst_mem[INST_ADDR/4]; // TODO: byte addressing
 
 endmodule
